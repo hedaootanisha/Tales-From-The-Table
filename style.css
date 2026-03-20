@@ -1,0 +1,145 @@
+.navbar {
+  background-color: #FFE156;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #2A2A2A;
+}
+
+.navbar nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #2A2A2A;
+  font-weight: bold;
+}
+
+.navbar nav a.active {
+  color: #6B4226;
+  border-bottom: 2px solid #6B4226;
+}
+
+.cafe-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 40px;
+}
+
+.cafe-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.cafe-card:hover {
+  transform: translateY(-5px);
+}
+
+.cafe-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.cafe-card h3 {
+  margin-top: 10px;
+  color: #6B4226;
+}
+
+.about-section, .contact-section {
+  padding: 40px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.about-section h2, .contact-section h2 {
+  color: #6B4226;
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: 'Lato', sans-serif;
+}
+
+.contact-form button {
+  background-color: #6B4226;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Body */
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #F1F1F1;
+  color: #2b1616;
+}
+
+/* Title and Hero Section */
+.title {
+  text-align: center;
+  font-size: 3rem;
+  margin: 40px 0 20px;
+  font-weight: 700;
+  color: #fffdfc;
+}
+
+.intro {
+  text-align: center;
+  font-size: 1.3rem;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 800px;
+  color: #fff8c1;
+}
+
+.button {
+  display: block;
+  width: 250px;
+  margin: 40px auto;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  background-color: #FFE156;
+  color: #2A2A2A;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.button:hover {
+  background-color: #D4A5A5;
+}
+
+/* Homepage background */
+.hero-section {
+  background-image: url('images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  text-shadow: 2px 2px 8px black;
+}

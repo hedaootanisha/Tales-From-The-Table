@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cafe Listings</title>
+  <link href="https://fonts.googleapis.com/css2?family=
+  Montserrat:wght@400;700&family=Lato&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <h1 class="title">The Tales From The Table</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="cafes.html" class="active">Cafes</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="cafe-container" id="cafeList">
+    <!-- Cafe cards injected via JavaScript -->
+  </section>
+
+  <script>
+    // Simulated fetch (replace with real fetch from backend)
+    const cafes = [
+  { name: "Mokai", image: "images/mokai.png", link: "https://g.co/kgs/BYPKT2t" },
+  { name: "70 Beans", image: "images/beans.png", link: "https://g.co/kgs/JimzKyc" },
+  { name: "Mantoou", image: "images/beansbeyond.png", link: "https://g.co/kgs/bxUNHNm" },
+  { name: "1BHK", image: "images/bhk.png", link: "https://g.co/kgs/Etd1XiR" },
+  { name: "Bites & Brew", image: "images/bitesnbrew.png", link: "https://g.co/kgs/UpVVgJ3" },
+  { name: "Blue Tokai", image: "images/blue.png", link: "https://g.co/kgs/DLsn3Ae" },
+  { name: "Brew House Cafe", image: "images/brew.png", link: "https://g.co/kgs/TaCfucb" },
+  { name: "Coffee By Di Bella", image: "images/cbdb.png", link: "https://g.co/kgs/TLAoz38" },
+  { name: "The Courtyard Cafe", image: "images/courtyard.png", link: "https://g.co/kgs/bpEvMrK" },
+  { name: "Earth Soul Cafe", image: "images/earthsoul.png", link: "https://g.co/kgs/TvqR1x2" },
+  { name: "EL-TACOS", image: "images/eltaco.png", link: "https://g.co/kgs/6ABYn3W" },
+  { name: "Grand Century Cafe", image: "images/grandcentury.png", link: "https://g.co/kgs/E7Fr1Za" },
+  { name: "JIMIS BURGER", image: "images/jimmy.png", link: "https://g.co/kgs/gmYa2gt" },
+  { name: "Kingsman Experience", image: "images/kingsman.png", link: "https://g.co/kgs/EYH1vp3" },
+  { name: "Panache", image: "images/panache.png", link: "https://g.co/kgs/AnsY8xM" },
+];
+
+
+    const cafeList = document.getElementById('cafeList');
+    cafes.forEach(cafe => {
+      const card = document.createElement('div');
+      card.className = 'cafe-card';
+      card.innerHTML = `
+        <a href="${cafe.link}" target="_blank">
+          <img src="${cafe.image}" alt="${cafe.name}" />
+          <h3>${cafe.name}</h3>
+        </a>
+      `;
+      cafeList.appendChild(card);
+    });
+  </script>
+</body>
+</html>
